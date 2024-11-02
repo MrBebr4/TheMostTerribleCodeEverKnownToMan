@@ -1,0 +1,5 @@
+nameOne = input()
+nameTwo = input()
+nameThree = input()
+firstPlayer = min(nameOne, nameTwo, nameThree)
+print(firstPlayer)
