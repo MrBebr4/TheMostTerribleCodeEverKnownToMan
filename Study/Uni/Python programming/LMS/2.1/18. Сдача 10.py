@@ -1,4 +1,4 @@
-#пробуем вводить числа в двоичной системе счисления
+# Пробуем вводить числа в двоичной системе счисления
 while True:
     try:
         change = int(input(), 2)
@@ -6,9 +6,10 @@ while True:
     except:
         print("invalidNumber")
         continue
-#запрашиваем сумму наличных
+
+# Запрашиваем сумму наличных
 cash = int(input())
 
-#вычисляем сдачу
+# Вычисляем сдачу
 actualChange = cash - change
 print(actualChange)

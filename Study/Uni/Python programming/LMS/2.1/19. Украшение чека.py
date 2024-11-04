@@ -1,16 +1,16 @@
-#ввод пользователя
+# Ввод пользователя
 item_name = input()
 item_price_per_kg = int(input())
 item_weight_kg = int(input())
 cash_given = int(input())
 
-#меняем типы переменных и добавляем текст
+# Меняем типы переменных и добавляем текст
 price_string = str(item_weight_kg) + 'кг * ' + str(item_price_per_kg) + 'руб/кг'
 total_price_string = str(item_price_per_kg * item_weight_kg) + 'руб'
 cash_given_string = str(cash_given) + 'руб'
 change_string = str(cash_given - item_price_per_kg * item_weight_kg) + 'руб'
 
-#вывод, числа после > указывают на минимальную длину строки
+# Вывод, числа после > указывают на минимальную длину строки
 print('================Чек================')
 print(f'Товар: {item_name:>28}')
 print(f'Цена: {price_string:>29}')

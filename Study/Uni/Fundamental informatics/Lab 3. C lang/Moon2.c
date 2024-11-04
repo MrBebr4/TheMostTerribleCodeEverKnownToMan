@@ -45,10 +45,7 @@ int main() {
     int i = START_I;
     int j = START_J;
     int l = START_L;
-    int k;
-
-    printf("Enter the value for k: ");
-    scanf("%d", &k);
+    int k = 0;
 
     for (int step = 0; step < MAX_STEPS; step++) {
         update_coordinates(&i, &j, &l, k);

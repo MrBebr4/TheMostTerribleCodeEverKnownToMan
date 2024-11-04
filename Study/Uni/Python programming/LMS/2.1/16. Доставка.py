@@ -1,8 +1,8 @@
-#переменные
+# Переменные
 alength = int(input())
 blenth = int(input())
 speed = int(input())
 
-#расчет
+# Расчет
 time = abs((blenth - alength) / speed)
 print(time)

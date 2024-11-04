@@ -1,58 +1,69 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
-// Constants
-#define MAX_STEPS 50
-#define RADIUS 10
-#define CENTER_X 0
-#define CENTER_Y 0
-
-// Function to update coordinates and dynamic parameter
-void obnovit_koordinaty(int i, int j, int l, int k) {
-    int sleduyushchiy_i = (i + (int)fmax(j, l)) % 30 + (j + (int)fmin(i, l)) % 20 + k;
-    int sleduyushchiy_j = (int)fmin(i, (int)fmax(j, (int)fmin(i, (int)fmax(i - l, j - l))));
-    int sleduyushchiy_l = (k - 10 >= 0 ? 1 : -1) * abs(i - j + l - k);
-
-    *i = sleduyushchiy_i;
-    *j = sleduyushchiy_j;
-    *l = sleduyushchiy_l;
-}
-
-// Function to check if the point is within the target area
-int vnutri_celevoy_oblasti(int i, int j) {
-    int dist = (i - CENTER_X) * (i - CENTER_X) + (j - CENTER_Y) * (j - CENTER_Y);
-    return dist <= RADIUS * RADIUS;
-}
-
-// Function to print the result
-void pechat_rezultata(int shagi, int i, int j, int l, int uspeh) {
-    if (uspeh) {
-        printf("Tochka dostigla celevoy oblasti za %d shagov.\n", shagi);
+int min(int a, int b) {
+    if (a <= b) {
+        return a;
     } else {
-        printf("Tochka ne dostigla celevoy oblasti za %d shagov.\n", shagi);
+        return b;
     }
-    printf("Konechnoe vremya: %d\n", shagi);
-    printf("Konechnye koordinaty: (%d, %d)\n", i, j);
-    printf("Znachenie dinamicheskogo parametra: %d\n", l);
 }
 
-int main() {
-    int i = 18;
-    int j = -9;
-    int l = 5;
-    int k;
-    scanf("%i", &k);
+int max(int a, int b) {
+    if (a >= b) {
+        return a;
+    } else {
+        return b;
+    }
+}
 
-    for (int shag = 1; shag < MAX_STEPS; shag++) {
-        obnovit_koordinaty(&i, &j, &l, k);
-
-        if (vnutri_celevoy_oblasti(i, j)) {
-            pechat_rezultata(k + 1, i, j, l, 1);
-            return 0;
-        }
+int mod(int a, int b) {
+    if (b == 0) {
+        return 0;
+    }
+    int result = a % b;
+    if (result < 0) {
+        result += (b > 0) ? b : -b;
     }
 
-    pechat_rezultata(MAX_STEPS, i, j, l, 0);
-    return 0;
+    return result;
+}
+int sign(int a) {
+    if (a > 0) {
+        return 1;
+    } else if (a == 0) {
+        return 0;
+    } else {
+        return -1;
+    }
+}
+
+bool isPointInRing(int x, int y) {
+    int centerX = 10;
+    int centerY = 10;
+    int innerRadius = 5;
+    int outerRadius = 10;
+
+    // Вычисляем расстояние от точки до центра
+    int distance = sqrt((x - centerX) * (x - centerX) + (y - centerY) * (y - centerY));
+    // Проверяем, попадает ли точка в кольцо
+    return (distance >= innerRadius && distance <= outerRadius);
+}
+
+
+int main(void) {
+    int i[51]; i[0]=18;
+    int j[51]; j[0]=-9;
+    int l[51]; l[0]=5;
+    bool flag = false;
+    for (int k = 0;k<50;k++){
+        i[k+1] = mod(i[k] * max(j[k], l[k]), 30) + mod(j[k] * min(i[k], l[k]), 20) + k;
+        j[k+1] = min(i[k], max(j[k], min(l[k], max(i[k]- l[k], j[k] - l[k]))));
+        l[k+1] = sign(k-10)*abs(i[k]-j[k]+l[k]-k);
+        if (isPointInRing(i[k], j[k])) {flag=true; printf("%s, %d, %d, %d", "Hit", i[k], j[k] , l[k]); break;}
+    }
+    if (flag==false) printf("%s, %d, %d, %d", "Miss", i[50], j[50] , l[50]);
+    getchar();
 }
