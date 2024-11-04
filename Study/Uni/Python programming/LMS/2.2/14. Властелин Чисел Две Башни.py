@@ -1,11 +1,14 @@
-# запрашиваем ввод
+# Запрашиваем ввод
 number = int(input())
+
+# Проверяем, что число в нужном диапазоне
 if 99 < number < 999:
     pass
 else:
     print("Invalid number")
     quit()
-# Выдрать числа
+
+# Выдрать цифры
 firstNum = number // 100
 secondNum = (number // 10) % 10
 thirdNum = number % 10
@@ -26,9 +29,9 @@ for num in combinations:
     if num >= 10:
         isValid.append(num)
 
-# Find the minimum and maximum valid combinations
+# Находим максимальное и минимальное число
 minNum = min(isValid)
 maxNum = max(isValid)
 
-# Print the results
+# Выводим результат
 print(minNum, maxNum)

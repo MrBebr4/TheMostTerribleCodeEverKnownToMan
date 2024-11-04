@@ -1,14 +1,14 @@
-# Read the average speeds of Petya, Vasya, and Tolya
-petya_speed = int(input())
-vasya_speed = int(input())
-tolya_speed = int(input())
+# Запраиваем у пользователя скорость трех спортсменов
+petyaSpeed = int(input())
+vasyaSpeed = int(input())
+tolyaSpeed = int(input())
 
-# Create a list of speeds
-speeds = [petya_speed, vasya_speed, tolya_speed]
+# Создаем список скоростей
+speeds = [petyaSpeed, vasyaSpeed, tolyaSpeed]
 
-# Sort the list by speed in descending order
+# Сортируем список по убыванию
 speeds.sort(reverse=True)
 
-# Print the sorted speeds
+# Выводим список победителей
 for i, speed in enumerate(speeds, start=1):
     print(f"{i}. {speed}")
