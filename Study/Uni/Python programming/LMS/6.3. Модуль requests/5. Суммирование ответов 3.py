@@ -1,11 +1,11 @@
 import requests
 
 try:
-    # Get the server URL from the user
+    # Получить URL сервера от пользователя
     url = input().strip()
     actualUrl = f"http://{url}"
 
-    # Get the list of paths from the user
+    # Получить список путей от пользователя
     paths = []
     while True:
         try:
@@ -20,25 +20,25 @@ try:
 
     for path in paths:
         try:
-            # Make a GET request to the server for each path
+            # Сделать GET-запрос к серверу для каждого пути
             response = requests.get(f"{actualUrl}{path}", timeout=5)
-            response.raise_for_status()  # Check if the request was successful
+            response.raise_for_status()  # Проверить, успешен ли запрос
 
-            # Decode the server response as JSON
+            # Декодировать ответ сервера как JSON
             responseJson = response.json()
 
-            # Check if the response is a list and contains only numbers
+            # Проверить, что ответ является списком и содержит только числа
             if isinstance(responseJson, list):
                 filteredResponse = [item for item in responseJson if isinstance(item, (int, float))]
                 totalSum += sum(filteredResponse)
 
         except requests.exceptions.RequestException as e:
-            print(f"Error: {e}")
+            print(f"Ошибка: {e}")
         except ValueError as e:
-            print(f"Error processing JSON: {e}")
+            print(f"Ошибка обработки JSON: {e}")
 
-    # Print the total sum
+    # Вывести общую сумму
     print(totalSum)
 
 except EOFError:
-    print("No input received. End of file reached.")
+    print("Входные данные не получены. Достигнут конец файла.")
