@@ -1,18 +1,18 @@
 places = int(input())
 creatures = ""
-placesList = []
-timesAmount = 0
+places_list = []
+times_amount = 0
 
 for i in range(places):
     while True:
         creatures = input()
         if "ВСЁ" in creatures:
             break
-        placesList.append(creatures)
+        places_list.append(creatures)
         creatures = ""
 
-for j in placesList:
+for j in places_list:
     if "зайка" in j:
-        timesAmount += 1
+        times_amount += 1
 
-print(timesAmount)
+print(times_amount)

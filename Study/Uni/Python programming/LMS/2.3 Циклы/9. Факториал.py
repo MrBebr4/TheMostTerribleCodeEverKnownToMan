@@ -1,19 +1,19 @@
 # Считываем число из ввода пользователя
-workingNumber = int(input())
+working_number = int(input())
 
 # Инициализируем переменную для хранения результата факториала
-endFactorial = 1
+end_factorial = 1
 
 # Проверяем, является ли введенное число нулем
-if workingNumber == 0:
+if working_number == 0:
     print(1) # Если число равно нулю, факториал равен 1
 
 else:
 
     # Цикл для вычисления факториала числа
-    while workingNumber > 0:
-        endFactorial = endFactorial * workingNumber  # Умножаем текущий результат факториала на текущее число
-        workingNumber -= 1  # Уменьшаем число на 1
+    while working_number > 0:
+        end_factorial = end_factorial * working_number  # Умножаем текущий результат факториала на текущее число
+        working_number -= 1  # Уменьшаем число на 1
 
     # Выводим окончательный результат факториала
-    print(endFactorial)
+    print(end_factorial)

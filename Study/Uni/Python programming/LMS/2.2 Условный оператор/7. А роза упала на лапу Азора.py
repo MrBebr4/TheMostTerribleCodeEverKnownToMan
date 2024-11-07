@@ -2,10 +2,10 @@
 number = input()
 
 # Переворачиваем число
-flippedNumber = number[::-1]
+flipped_number = number[::-1]
 
 # Сравниваем число и его перевернутый вариант
-if flippedNumber == number:
+if flipped_number == number:
     print("YES")
 else:
     print("NO")

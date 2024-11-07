@@ -1,28 +1,28 @@
 # Изначальное количество яблок
-petyasApple = 7
-vasyasApple = 6
-tolyasApple = None
-genasApple = None
-dimasApple = None
+petyas_apple = 7
+vasyas_apple = 6
+tolyas_apple = None
+genas_apple = None
+dimas_apple = None
 
 # Постоянные изменения
-petyasApple = 7 - 3 + 2
-vasyasApple = 6 + 3
-tolyasApple = -4
-genasApple = +2
+petyas_apple = 7 - 3 + 2
+vasyas_apple = 6 + 3
+tolyas_apple = -4
+genas_apple = +2
 
 # Сколько дал дима
-dimaGavePetya = int(input())
-dimaGaveVasya = int(input())
+dima_gave_petya = int(input())
+dima_gave_vasya = int(input())
 
 # Изменения от димы
-petyasApple = petyasApple + dimaGavePetya
-vasyasApple = vasyasApple + dimaGaveVasya
+petyas_apple = petyas_apple + dima_gave_petya
+vasyas_apple = vasyas_apple + dima_gave_vasya
 
 # Вывод результата
-if petyasApple > vasyasApple:
+if petyas_apple > vasyas_apple:
     print("Петя")
-elif vasyasApple > petyasApple:
+elif vasyas_apple > petyas_apple:
     print("Вася")
 else:
     print("Ничья")

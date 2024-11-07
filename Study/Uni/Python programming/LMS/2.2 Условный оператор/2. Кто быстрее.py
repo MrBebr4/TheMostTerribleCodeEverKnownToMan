@@ -1,11 +1,11 @@
 # Запрашиваем скорость Васи и Пети
-vasyaSpeed = int(input())
-petyaSpeed = int(input())
+vasya_speed = int(input())
+petya_speed = int(input())
 
 # Сравниваем скорости и выбираем победителя
-if vasyaSpeed > petyaSpeed:
+if vasya_speed > petya_speed:
     print("Вася")
-elif petyaSpeed > vasyaSpeed:
+elif petya_speed > vasya_speed:
     print("Петя")
 else:
     print("Ничья")

@@ -1,8 +1,8 @@
 # Получаем три строки с именами игроков
-nameOne = input()
-nameTwo = input()
-nameThree = input()
+name_one = input()
+name_two = input()
+name_three = input()
 
 # Находим первого игрока по лексикографическому порядку
-firstPlayer = min(nameOne, nameTwo, nameThree)
-print(firstPlayer)
+first_player = min(name_one, name_two, name_three)
+print(first_player)

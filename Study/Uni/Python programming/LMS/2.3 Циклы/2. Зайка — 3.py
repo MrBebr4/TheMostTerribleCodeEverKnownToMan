@@ -3,11 +3,11 @@ lines = []
 
 # Запрашиваем строрки с зайкой и добавляем их в список lines. После получения строки "Приехали!" завершаем цикл
 while True:
-    lineStr = input()
-    if lineStr == "Приехали!":
+    line_str = input()
+    if line_str == "Приехали!":
         break
-    elif "зайка" in lineStr:
-        lines.append(lineStr)
+    elif "зайка" in line_str:
+        lines.append(line_str)
     else:
         continue
 

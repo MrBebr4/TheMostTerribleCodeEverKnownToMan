@@ -3,10 +3,10 @@ speed = 0.5
 
 # Запрашиваем у пользователя время и количество детей
 time = int(input())
-childrenAmount = int(input())
+children_amount = int(input())
 
 # Рассчитываем результат (время * скорость * количество детей)
-result = time * speed * childrenAmount
+result = time * speed * children_amount
 
 # Переводим результат в целое число
 result = int(result)

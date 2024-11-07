@@ -1,7 +1,7 @@
-timesNum = int(input())
-startTime = 3
-for i in range(1, timesNum + 1):
-    for j in range(startTime, 0, -1):
+times_num = int(input())
+start_time = 3
+for i in range(1, times_num + 1):
+    for j in range(start_time, 0, -1):
         print(f"До старта {j} секунд(ы)")
-    startTime = startTime + 1
+    start_time = start_time + 1
     print(f"Старт {i}!!!")

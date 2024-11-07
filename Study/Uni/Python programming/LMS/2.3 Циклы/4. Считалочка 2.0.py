@@ -1,21 +1,21 @@
 # Запрашиваем начальное и конечное значения диапазона
-arrayStart = int(input())
-arrayEnd = int(input())
+array_start = int(input())
+array_end = int(input())
 
 # Если начальное значение больше конечного, меняем их местами
-if arrayStart > arrayEnd:
-    arrayStart, arrayEnd = arrayEnd, arrayStart
+if array_start > array_end:
+    array_start, array_end = array_end, array_start
 
 # Вычисляем длину диапазона
-length = arrayEnd - arrayStart + 1
+length = array_end - array_start + 1
 
 # Инициализируем пустой список для хранения чисел диапазона
 line = []
 
 # Заполняем список числами из диапазона
 while length > 0:
-    line.append(arrayStart)
-    arrayStart += 1
+    line.append(array_start)
+    array_start += 1
     length -= 1
 
 # Выводим числа из списка, разделенные пробелами

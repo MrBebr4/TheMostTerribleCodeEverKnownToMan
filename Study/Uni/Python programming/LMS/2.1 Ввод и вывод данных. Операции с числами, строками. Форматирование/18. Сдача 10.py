@@ -11,5 +11,5 @@ while True:
 cash = int(input())
 
 # Вычисляем сдачу
-actualChange = cash - change
-print(actualChange)
+actual_change = cash - change
+print(actual_change)

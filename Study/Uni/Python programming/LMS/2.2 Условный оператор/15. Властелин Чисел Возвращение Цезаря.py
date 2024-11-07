@@ -1,29 +1,29 @@
 # Получаем два числа
-firstNum = int(input())
-secondNum = int(input())
+first_num = int(input())
+second_num = int(input())
 
 # Проверяем, что числа в нужном диапазоне
-if firstNum and secondNum < 100:
+if first_num and second_num < 100:
     pass
 else:
     print("Invalid number")
     quit()
 
 # Выдрать цифры из первого числа
-firstNum1 = firstNum // 10
-firstNum3 = firstNum % 10
+first_num1 = first_num // 10
+first_num3 = first_num % 10
 
 # Выдрать цифры из второго числа
-secondNum1 = secondNum // 10
-secondNum3 = secondNum % 10
+second_num1 = second_num // 10
+second_num3 = second_num % 10
 
 # Создать список из цифр
-nums = [firstNum1, firstNum3, secondNum1, secondNum3]
+nums = [first_num1, first_num3, second_num1, second_num3]
 
 # Найти максимальное, минимальное и среднее число
-maxNum = max(nums)
-minNum = min(nums)
-middleNum = sum(nums) - maxNum - minNum
+max_num = max(nums)
+min_num = min(nums)
+middle_num = sum(nums) - max_num - min_num
 
 # Собрать итоговое число и вывести его
-print(maxNum * 100 + middleNum * 10 + minNum)
+print(max_num * 100 + middle_num * 10 + min_num)

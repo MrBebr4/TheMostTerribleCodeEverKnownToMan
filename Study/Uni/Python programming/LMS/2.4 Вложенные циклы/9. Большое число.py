@@ -1,19 +1,19 @@
 # Считываем количество чисел
-timesAmount = int(input())
+times_amount = int(input())
 
 # Инициализируем переменную для хранения максимальной суммы цифр
-maxNum = 0
+max_num = 0
 
 # Инициализируем список для хранения сумм цифр каждого числа
-kidsSums = []
+kids_sums = []
 
 # Проходим по каждому числу
-for i in range(timesAmount):
-    kidNum = input()  # Считываем число, названное ребенком
-    for j in kidNum:
-        maxNum = maxNum + int(j)  # Вычисляем сумму цифр числа
-        kidsSums.append(maxNum)  # Добавляем сумму в список
-    maxNum = 0  # Сбрасываем сумму для следующего числа
+for i in range(times_amount):
+    kid_num = input()  # Считываем число, названное ребенком
+    for j in kid_num:
+        max_num = max_num + int(j)  # Вычисляем сумму цифр числа
+        kids_sums.append(max_num)  # Добавляем сумму в список
+    max_num = 0  # Сбрасываем сумму для следующего числа
 
 # Выводим максимальную сумму цифр
-print(max(kidsSums))
+print(max(kids_sums))

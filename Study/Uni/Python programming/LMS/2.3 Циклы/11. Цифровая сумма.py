@@ -1,15 +1,15 @@
 # Считываем введенное число
-computeNum = input()
+compute_num = input()
 
 # Инициализируем переменную для хранения суммы цифр
-computedSum = 0
+computed_sum = 0
 
 # Проходим по каждой цифре в числе
-for i in computeNum:
+for i in compute_num:
     # Преобразуем строку в целое число
     i = int(i)
     # Добавляем цифру к общей сумме
-    computedSum += i
+    computed_sum += i
 
 # Выводим сумму цифр
-print(computedSum)
+print(computed_sum)

@@ -1,41 +1,41 @@
 # запрашиваем у пользователя два числа до 3-х знаков
 while True:
-    firstnum = int(input())
-    secondnum = int(input())
-    if firstnum or secondnum < 999:
+    first_num = int(input())
+    second_num = int(input())
+    if first_num or second_num < 999:
         break
     else:
         print("Please enter a 3-digit number or less")
         continue
 
 # переводим числа в строку
-firstnum = str(firstnum)
-secondnum = str(secondnum)
+first_num = str(first_num)
+second_num = str(second_num)
 
 # заполняем числа нулями слева
-firstnum = firstnum.zfill(3)
-secondnum = secondnum.zfill(3)
+first_num = first_num.zfill(3)
+second_num = second_num.zfill(3)
 
 # выдергиваем цифры из чисел порозрядно
 try:
-    firstnum3 = int(firstnum[2])
+    first_num3 = int(first_num[2])
 except:
-    firstnum3 = 0
-firstnum2 = int(firstnum[1])
-firstnum1 = int(firstnum[0])
+    first_num3 = 0
+first_num2 = int(first_num[1])
+first_num1 = int(first_num[0])
 
 # выдергиваем цифры из чисел порозрядно
 try:
-    secondnum3 = int(secondnum[2])
+    second_num3 = int(second_num[2])
 except:
-    secondnum3 = 0
-secondnum2 = int(secondnum[1])
-secondnum1 = int(secondnum[0])
+    second_num3 = 0
+second_num2 = int(second_num[1])
+second_num1 = int(second_num[0])
 
 # складываем числа и находим остаток от деления на 10
-sum1 = (firstnum3 + secondnum3) % 10
-sum2 = (firstnum2 + secondnum2) % 10
-sum3 = (firstnum1 + secondnum1) % 10
+sum1 = (first_num3 + second_num3) % 10
+sum2 = (first_num2 + second_num2) % 10
+sum3 = (first_num1 + second_num1) % 10
 
 # выводим результат
 result = f"{sum3}{sum2}{sum1}"

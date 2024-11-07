@@ -1,10 +1,10 @@
 # Запрашиваем скорость каждого участника
-petyaSpeed = int(input())
-vasyaSpeed = int(input())
-tolyaSpeed = int(input())
+petya_speed = int(input())
+vasya_speed = int(input())
+tolya_speed = int(input())
 
 # создаем кортеж участников
-participants = [("Петя", petyaSpeed), ("Вася", vasyaSpeed), ("Толя", tolyaSpeed)]
+participants = [("Петя", petya_speed), ("Вася", vasya_speed), ("Толя", tolya_speed)]
 
 # Отсортируем участников по скорости
 participants.sort(key=lambda x: x[1], reverse=True)

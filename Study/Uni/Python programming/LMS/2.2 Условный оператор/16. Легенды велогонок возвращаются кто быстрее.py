@@ -1,10 +1,10 @@
 # Запросить скорости
-petyaSpeed = int(input())
-vasyaSpeed = int(input())
-tolyaSpeed = int(input())
+petya_speed = int(input())
+vasya_speed = int(input())
+tolya_speed = int(input())
 
 # Создать кортеж из скоростей и имен
-speeds = [("Petya", petyaSpeed), ("Vasya", vasyaSpeed), ("Tolya", tolyaSpeed)]
+speeds = [("Petya", petya_speed), ("Vasya", vasya_speed), ("Tolya", tolya_speed)]
 speeds.sort(key=lambda x: x[1], reverse=True)
 
 # Вывести имена в порядке финиширования

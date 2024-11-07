@@ -1,8 +1,8 @@
-numBer = int(input())
+num_ber = int(input())
 
 # Проходим по строкам таблицы умножения
-for i in range(1, numBer + 1):
+for i in range(1, num_ber + 1):
     # Проходим по столбцам таблицы умножения
-    for j in range(1, numBer + 1):
+    for j in range(1, num_ber + 1):
         # Выводим произведение текущих индексов
         print(f"{j} * {i} = {i * j}")

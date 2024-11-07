@@ -1,16 +1,16 @@
 # Переменные
-totalWeight = int(input())
-totalPrice = int(input())
-firstPrice = int(input())
-secondPrice = int(input())
+total_weight = int(input())
+total_price = int(input())
+first_price = int(input())
+second_price = int(input())
 
 # Расчет
-if firstPrice > secondPrice:
-    firstWeight = int((totalPrice - secondPrice) * totalWeight / (firstPrice - secondPrice))
-    secondWeight = int(totalWeight - firstWeight)
+if first_price > second_price:
+    first_weight = int((total_price - second_price) * total_weight / (first_price - second_price))
+    second_weight = int(total_weight - first_weight)
 else:
     print("Invalid price")
     quit()
 
 # Вывод
-print(firstWeight, secondWeight)
+print(first_weight, second_weight)

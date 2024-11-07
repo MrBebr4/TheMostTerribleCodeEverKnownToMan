@@ -9,29 +9,29 @@ else:
     quit()
 
 # Выдрать цифры
-firstNum = number // 100
-secondNum = (number // 10) % 10
-thirdNum = number % 10
+first_num = number // 100
+second_num = (number // 10) % 10
+third_num = number % 10
 
 # Зоздать все возможные комбинации
 combinations = [
-    firstNum * 10 + secondNum,
-    firstNum * 10 + thirdNum,
-    secondNum * 10 + firstNum,
-    secondNum * 10 + thirdNum,
-    thirdNum * 10 + firstNum,
-    thirdNum * 10 + secondNum
+    first_num * 10 + second_num,
+    first_num * 10 + third_num,
+    second_num * 10 + first_num,
+    second_num * 10 + third_num,
+    third_num * 10 + first_num,
+    third_num * 10 + second_num
 ]
 
 # Отфильтровываем не подходящие комбинации
-isValid = []
+is_valid = []
 for num in combinations:
     if num >= 10:
-        isValid.append(num)
+        is_valid.append(num)
 
 # Находим максимальное и минимальное число
-minNum = min(isValid)
-maxNum = max(isValid)
+min_num = min(is_valid)
+max_num = max(is_valid)
 
 # Выводим результат
-print(minNum, maxNum)
+print(min_num, max_num)
