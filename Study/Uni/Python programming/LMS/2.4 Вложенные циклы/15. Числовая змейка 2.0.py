@@ -12,10 +12,15 @@ matrix = [[0] * M for _ in range(N)]
 # Заполняем матрицу числами по столбцам
 current_num = 1
 for j in range(M):
-    for i in range(N):
-        matrix[i][j] = current_num
-        current_num += 1
+    if j % 2 == 0:
+        for i in range(N):
+            matrix[i][j] = current_num
+            current_num += 1
+    else:
+        for i in range(N-1, -1, -1):
+            matrix[i][j] = current_num
+            current_num += 1
 
-# Выводим числовой прямоугольник
+# Выводим числовую змейку
 for row in matrix:
     print(" ".join(f"{num:>{num_width}}" for num in row))
